@@ -1,11 +1,19 @@
-.TH SHELLBY 1 "August 2022" "ALX School" "0x15. C - Simple Shell"
+.
+.TH man 15 "August 2022" "ALX-Holberton School" "0x16. C - Simple Shell"
 .SH NAME
 .B shellby\fR \- simple UNIX command interpreter
 .SH SYNOPSIS
-.B shellby\fR [\fIfilename\fR]
+..B #include \(dqmain.h\(dq
+.sp
+.B int hsh(void)
 .SH DESCRIPTION
-.B Shellby\fR is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
-
+.B Overview
+.sp
+The simple shell is an application that reads lines from either a file or the
+terminal, interprets them, and executes them. Users can interactively type directly
+to the
+running shell or pipe in shell scripts.
+.sp
 .B Invocation
 .in +2n
 \fBShellby\fR can be invoked both interactively and non-interactively.
@@ -70,11 +78,11 @@ Alternatively, an input of end-of-file (\fBCtrl+d\fR) will exit the program.
 .RE
 
 .RS
-.B $?\fR			\fI?\fR is substituted with the return value of the last program executed.
+.B $?\fR	\fI?\fR is substituted with the return value of the last program executed.
 .RE
 
 .RS
-.B $$\FR			The second \fI$\fR is substituted with the current process ID.
+.B $$\FR	The second \fI$\fR is substituted with the current process ID.
 .RE
 
 .B Comments
@@ -179,4 +187,7 @@ access(2), chdir(2), execve(2), _exit(2), exit(3), fflush(3), fork(2), free(3), 
 .B Shellby\fR emulates basic functionality of the \fBsh\fR shell.
 This man page borrows from the corresponding man pages sh(1) and dash(1).
 .SH AUTHOR
-Alex Yu and Brennan D Baraban
+* Miyanda Hakooma <[Miyanda Hakooma](https://github.com/mhakooma)>
+* Fitsum Senbeta <[Fitsum Senbeta](https://github.com/mhakooma)>
+.SH SEE ALSO
+.BR sh (1)
